@@ -590,9 +590,12 @@ body::after {
 }
 
 .header._header-scroll {
-  -webkit-backdrop-filter: blur(0.625rem);
-          backdrop-filter: blur(0.625rem);
   background-color: rgba(255, 255, 255, 0.85);
+  -webkit-transition: -webkit-backdrop-filter 0.3s ease 0s;
+  transition: -webkit-backdrop-filter 0.3s ease 0s;
+  -o-transition: backdrop-filter 0.3s ease 0s;
+  transition: backdrop-filter 0.3s ease 0s;
+  transition: backdrop-filter 0.3s ease 0s, -webkit-backdrop-filter 0.3s ease 0s;
 }
 
 @supports (margin-right: clamp( 1.875rem , -39.9196428571rem  +  67.4107142857vw , 20.75rem )) {
@@ -2219,28 +2222,26 @@ body::after {
     position: fixed;
     top: 0;
     left: -100%;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: auto;
-    background: -webkit-gradient(linear, left bottom, left top, from(rgb(0, 0, 0)), color-stop(50%, rgb(255, 255, 255)));
-    background: -o-linear-gradient(bottom, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 50%);
-    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 50%);
+    background-color: rgb(255, 255, 255);
     padding: 5rem 0.9375rem 3.125rem 0.9375rem;
-    -webkit-transition: left 0.8s ease 0.2s;
-    -o-transition: left 0.8s ease 0.2s;
-    transition: left 0.8s ease 0.2s;
+    -webkit-transition: left 0.5s ease 0s;
+    -o-transition: left 0.5s ease 0s;
+    transition: left 0.5s ease 0s;
   }
 
   .menu__body::before {
     content: "";
     position: fixed;
-    width: 100vw;
+    width: 100%;
     height: 5rem;
     left: -100%;
     top: 0;
-    -webkit-transition: left 0.8s ease 0.2s;
-    -o-transition: left 0.8s ease 0.2s;
-    transition: left 0.8s ease 0.2s;
+    -webkit-transition: left 0.5s ease 0s;
+    -o-transition: left 0.5s ease 0s;
+    transition: left 0.5s ease 0s;
   }
 
   .menu-open .menu__body {
@@ -2249,7 +2250,7 @@ body::after {
 
   .menu-open .menu__body::before {
     left: 0;
-    background: #fff;
+    background-color: rgba(255, 255, 255, 0.85);
   }
 
   .menu__list {
