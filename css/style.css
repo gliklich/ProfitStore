@@ -2270,6 +2270,7 @@ body::after {
   }
 
   .icon-menu {
+    -webkit-tap-highlight-color: transparent;
     display: block;
     position: relative;
     width: 1.875rem;
