@@ -635,6 +635,7 @@ body::after {
   background-color: #ff9900;
   border-radius: 0.25rem;
   white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
   -webkit-transition: background-color 0.3s ease 0s;
   -o-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
