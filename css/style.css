@@ -2355,6 +2355,7 @@ body::after {
 @media (max-width: 47.99875em) {
   .popup__title {
     padding-left: 0rem;
+    max-width: 14.0625rem;
   }
 
   .popup__title::before {
